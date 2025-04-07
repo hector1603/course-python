@@ -3,13 +3,14 @@ class Auto:
         self.marca = marca
         self.modelo = modelo
         self.año = año
+        self.kilometraje = kilometraje
 
     def mostrar_informacion(self):
-        return 'El auto es un {self.marca} modelo {self.modelo} del {self.año}'
+        print(f'El auto es un {self.marca} modelo {self.modelo} del {self.año}')
 
     def actualizar_kilometraje(self, kilometraje):
         if kilometraje < self.kilometraje:
-            return 'No se puede reducir el kilometraje'
+            print('No se puede reducir el kilometraje')
         else:
             self.kilometraje = kilometraje
 
@@ -17,15 +18,15 @@ class Auto:
         if kilometros > 0:
             self.kilometraje += kilometros
         else:
-            return 'La cantidad de kilometros debe ser positivo'
+            print('La cantidad de kilometros debe ser positivo')
     
     def estado_auto(self):
         if self.kilometraje < 20000:
-            return 'Estoy como nuevo'
+            print('🟢 Estoy como nuevo')
         elif self.kilometraje >= 20000 and self.kilometraje <= 100000:
-            return 'Ya estoy usado'
+            print('🟡 Ya estoy usado')
         else:
-            return 'Ya dejame descansar por favor!'
+            print('🔴 Ya dejame descansar por favor!')
 
 
 while True:
