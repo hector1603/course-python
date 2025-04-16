@@ -7,6 +7,14 @@ class Laptop_Business(Laptop):
         self.almacenamiento = almacenamiento
         self.duracion_bateria = duracion_bateria
 
+    def __str__(self):
+        return (f"Marca: {self.marca}\n"
+                f"Procesador: {self.procesador}\n"
+                f"Memoria: {self.memoria}\n"
+                f"Almacenamiento: {self.almacenamiento}\n"
+                f"Batería: {self.duracion_bateria}\n"
+                f"Precio final: ${self.precio}\n\n")
+
     def realizar_diagnostico_sistema(self):
         diagnostico =  super().realizar_diagnostico_sistema()
         diagnostico.update({

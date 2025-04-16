@@ -23,3 +23,13 @@ class Laptop:
         }
 
         return resultado
+
+    def realizar_informe_uso(self):
+        resultado_informe = {
+            "Tipo": 'Generico',
+            "Uso recomendado": 'Tareas cotidianas',
+            "Horas de uso": 5,
+            "Diagnostico actual": self.realizar_diagnostico_sistema()
+        }
+
+        return resultado_informe
